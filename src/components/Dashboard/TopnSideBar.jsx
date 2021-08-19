@@ -18,9 +18,9 @@ import { mainListItems, secondaryListItems } from './llistItems';
 import { dashboardStyles } from './dashboardStyles';
 import MailIcon from '@material-ui/icons/Mail';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import DashboardContent from './dashboardContent';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-export default function DashAppBar() {
+export default function TopnSideBar() {
     const classes = dashboardStyles();
     const [open, setOpen] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -105,6 +105,7 @@ export default function DashAppBar() {
     );
     return (
         <>
+        <CssBaseline />
             <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
                 <Toolbar className={classes.toolbar}>
                     <IconButton
@@ -173,7 +174,6 @@ export default function DashAppBar() {
                 <Divider />
                 <List>{secondaryListItems}</List>
             </Drawer>
-            {/* <DashboardContent/> */}
             {renderMobileMenu}
             {renderMenu}
         </>

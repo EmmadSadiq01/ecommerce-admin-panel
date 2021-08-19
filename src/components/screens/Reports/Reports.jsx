@@ -1,5 +1,5 @@
 import React from 'react'
-import { dashboardStyles } from './dashboardStyles';
+import { dashboardStyles } from '../../Dashboard/dashboardStyles';
 import clsx from 'clsx';
 
 // material imports
@@ -22,7 +22,7 @@ const Copyright = () => {
         </Typography>
     );
 }
-const DashboardContent = () => {
+const Reports = () => {
 
     const classes = dashboardStyles();
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
@@ -31,22 +31,19 @@ const DashboardContent = () => {
             <div className={classes.appBarSpacer} />
             <Container maxWidth="lg" className={classes.container}>
                 <Grid container spacing={3}>
-                    {/* Chart */}
                     <Grid item xs={12} md={8} lg={9}>
                         <Paper className={fixedHeightPaper}>
-                            {/* <Chart /> */}
+                            <h1>Reports screen</h1>
+
                         </Paper>
                     </Grid>
-                    {/* Recent Deposits */}
                     <Grid item xs={12} md={4} lg={3}>
                         <Paper className={fixedHeightPaper}>
-                            {/* <Deposits /> */}
                         </Paper>
                     </Grid>
-                    {/* Recent Orders */}
                     <Grid item xs={12}>
                         <Paper className={classes.paper}>
-                            {/* <Orders /> */}
+
                         </Paper>
                     </Grid>
                 </Grid>
@@ -60,4 +57,4 @@ const DashboardContent = () => {
     )
 }
 
-export default DashboardContent
+export default Reports;
